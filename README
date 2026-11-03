@@ -1,0 +1,125 @@
+# IROHA – Japanese Learning Platform 🇯🇵
+
+IROHA is a web-based Japanese learning platform designed to help learners study Japanese and prepare for the **JLPT N5 and N4 examinations**. It provides a structured learning environment for studying vocabulary, grammar, Japanese characters, and practicing language skills.
+
+The platform aims to make Japanese learning more organized and accessible through a simple, user-friendly interface.
+
+## ✨ Features
+
+- **JLPT Courses:** Structured learning content for N5 and N4 levels.
+- **Vocabulary:** Explore and learn Japanese words.
+- **Grammar:** Study Japanese grammar concepts.
+- **Japanese Characters:** Learn Hiragana, Katakana, and Kanji.
+- **Practice:** Improve understanding through practice activities.
+- **Smart Review:** A dedicated space for reviewing learning material.
+- **User Authentication:** User registration and login.
+- **User Profile:** Manage personal information and learning preferences.
+- **Database Integration:** Store user information and profile settings in MySQL.
+
+## 🛠️ Technologies Used
+
+| Category | Technologies |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend | PHP |
+| Database | MySQL |
+| Development Tools | Visual Studio Code, XAMPP |
+
+## 📂 Project Structure
+
+```text
+IROHA/
+│
+├── index.html
+├── db.php
+├── test_db.php
+│
+└── sidepages/
+    ├── register.php
+    ├── login.php
+    ├── profile.php
+    ├── profile_settings.php
+    ├── vocabulary.html
+    ├── grammar.html
+    ├── characters.html
+    ├── practice.html
+    ├── review.html
+    └── progress.html
+```
+
+*Note: This is a simplified overview of the project structure.*
+
+## ⚙️ Installation and Setup
+
+Follow these steps to run IROHA locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/IROHA.git
+```
+
+### 2. Move the Project
+
+Place the project folder inside the XAMPP `htdocs` directory.
+
+```text
+C:\xampp\htdocs\IROHA
+```
+
+### 3. Start XAMPP
+
+- Start Apache.
+- Start MySQL.
+
+### 4. Create the Database
+
+1. Open `http://localhost/phpmyadmin/`.
+2. Create a database named `iroha.db`.
+3. Create the required project tables.
+
+### 5. Configure the Database
+
+Update the database connection details in `db.php` according to your local MySQL configuration.
+
+### 6. Run the Project
+
+Open the following URL in your browser:
+
+```text
+http://localhost/IROHA/
+```
+
+## 🗄️ Database
+
+IROHA uses MySQL to manage application data.
+
+The database includes tables for:
+
+- Users
+- User Profiles
+- Bookmarks
+- Learning Progress
+- Review History
+
+## 🎯 Project Objective
+
+The objective of IROHA is to create a centralized Japanese learning platform where learners can access study materials, practice Japanese, and manage their learning journey in one place.
+
+## 🚀 Future Improvements
+
+- Complete database integration for bookmarks and learning progress.
+- Personalized learning recommendations.
+- Improved review and revision functionality.
+- Additional JLPT learning materials.
+- Enhanced user experience and accessibility.
+
+## 👩‍💻 Developed By
+
+**Vaishali Nikalje**
+
+A web development project focused on creating an organized and accessible Japanese learning experience.
+
+---
+
+*IROHA – Learn Japanese, one step at a time.*
