@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar | IROHA</title>
+
+    <link rel="stylesheet" href="grammar.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">IROHA</a>
+
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="vocabulary.html">Vocabulary</a>
+            <a href="grammar.html">Grammar</a>
+            <a href="characters.html">Characters</a>
+            <a href="practice.html">Practice</a>
+            <a href="review.html">Smart Review</a>
+            <a href="progress.html">My Progress</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="grammar-hero">
+
+        <div class="hero-content">
+            <span class="hero-eyebrow">THE ART OF JAPANESE GRAMMAR</span>
+
+            <h1>
+                Understand Japanese,<br>
+                <span>one pattern at a time.</span>
+            </h1>
+
+            <p>
+                Explore Japanese grammar from N5 to N4.
+                Understand sentence structures, learn essential patterns,
+                and build confidence in expressing yourself.
+            </p>
+
+            <a href="#jlpt-levels" class="hero-btn">
+                Explore Grammar <span>→</span>
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <span class="japanese-text">文法</span>
+            <span class="decoration-caption">Learn · Understand · Express</span>
+        </div>
+
+    </section>
+
+    <!-- JLPT Level Selection -->
+    <section class="jlpt-section" id="jlpt-levels">
+
+        <div class="section-heading">
+            <span class="section-eyebrow">CHOOSE YOUR LEVEL</span>
+            <h2>Where would you like to begin?</h2>
+            <p>Select your JLPT level and explore grammar patterns at your pace.</p>
+        </div>
+
+        <div class="jlpt-level-container">
+
+            <button class="jlpt-card active" data-level="N5">
+                <span class="level-number">01</span>
+                <span class="level-tag">BEGINNER</span>
+                <h3>JLPT N5</h3>
+                <p>Build your foundation with essential Japanese grammar.</p>
+                <span class="level-arrow">Explore N5 →</span>
+            </button>
+
+            <button class="jlpt-card" data-level="N4">
+                <span class="level-number">02</span>
+                <span class="level-tag">ELEMENTARY</span>
+                <h3>JLPT N4</h3>
+                <p>Move beyond the basics and express more complex ideas.</p>
+                <span class="level-arrow">Explore N4 →</span>
+            </button>
+
+        </div>
+
+    </section>
+    <!-- JLPT section ends here -->
+
+    <!-- Grammar Library -->
+    <section class="grammar-library" id="grammar-library" hidden>
+
+        <div class="section-heading">
+            <span class="section-eyebrow">GRAMMAR LIBRARY</span>
+            <h2>Explore by category</h2>
+            <p>Choose a category and discover the grammar patterns you need to learn.</p>
+        </div>
+
+        <div class="grammar-category-header">
+            <h3 id="selectedLevelTitle">JLPT N5 Grammar</h3>
+            <span id="categoryCount"></span>
+        </div>
+
+        <div class="grammar-category-grid" id="grammarCategoryGrid">
+            <!-- Categories will be loaded here using JavaScript -->
+        </div>
+
+        <p class="no-categories-message" id="noCategoriesMessage" hidden>
+            No categories found.
+        </p>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>🌸Nihongo</h3>
+
+        <p>One character at a time, one step closer to fluency.</p>
+
+        <a href="../index.html">Back to Home</a>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="/sidepages/grammar.js"></script>
+
+</body>
+
+</html>

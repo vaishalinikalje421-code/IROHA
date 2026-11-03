@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary |IROHA</title>
+    <link rel="stylesheet" href="vocabulary.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">IROHA</a>
+
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="vocabulary.html">Vocabulary</a>
+            <a href="grammar.html">Grammar</a>
+            <a href="characters.html">Characters</a>
+            <a href="practice.html">Practice</a>
+            <a href="review.html">Smart Review</a>
+            <a href="progress.html">My Progress</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+    <main>
+        <!--hero section -->
+        <section class="vocab-hero">
+            <span class="section-tag">YOUR JAPANESE WORD JOURNEY</span>
+
+            <h1>Words open <span>new worlds.</span></h1>
+
+            <p>
+                Discover Japanese vocabulary, learn its meaning,
+                and build your confidence one word at a time.
+            </p>
+
+            <div class="vocab-stats">
+                <div class="stat-card">
+                    <strong id="totalWordCount">2,000+</strong>
+                    <span>Words to explore</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>N5</strong>
+                    <span>Beginner level</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>N4</strong>
+                    <span>Elementary level</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vocabulary -->
+        <section class="vocab-library" id="vocabularyLibrary">
+
+            <div class="library-heading">
+                <div>
+                    <span class="section-tag">YOUR WORD LIBRARY</span>
+                    <h2>Explore vocabulary</h2>
+                    <p>Learn Japanese one word at a time.</p>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="vocab-controls">
+                <input type="search" id="wordSearch" placeholder="Search Japanese, romaji or English..."
+                    aria-label="Search vocabulary">
+
+                <!-- JLPT level filters -->
+                <div class="level-filters">
+                    <button class="level-btn active" data-level="all" type="button" aria-pressed="true">
+                        All words
+                    </button>
+
+                    <button class="level-btn" data-level="N5" type="button" aria-pressed="false">
+                        JLPT N5
+                    </button>
+
+                    <button class="level-btn" data-level="N4" type="button" aria-pressed="false">
+                        JLPT N4
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results information -->
+            <div class="vocab-results-info">
+                <p id="resultsCount" aria-live="polite">
+                    Preparing your vocabulary...
+                </p>
+
+                <label for="wordsPerPage">Words per page</label>
+
+                <select id="wordsPerPage">
+                    <option value="20" selected>20 words</option>
+                    <option value="40">40 words</option>
+                    <option value="60">60 words</option>
+                </select>
+            </div>
+
+            <!-- JavaScript will insert vocabulary entries here -->
+            <div class="vocab-grid" id="vocabularyList" aria-live="polite"></div>
+
+            <!-- Loading and error messages -->
+            <p class="vocab-status" id="loadingMessage">
+                Loading vocabulary...
+            </p>
+
+            <p class="vocab-status" id="emptyMessage" hidden>
+                No words found. Try another search.
+            </p>
+
+            <p class="vocab-status" id="errorMessage" role="alert" hidden>
+                Vocabulary could not be loaded. Please try again.
+                <button id="retryButton" type="button">
+                    Try again
+                </button>
+            </p>
+
+            <!-- Pagination -->
+            <div class="vocab-pagination" id="vocabPagination" hidden>
+                <button id="previousPage" type="button" disabled>
+                    ← Previous
+                </button>
+
+                <span id="pageInfo" aria-live="polite">Page 1</span>
+
+                <button id="nextPage" type="button">
+                    Next →
+                </button>
+            </div>
+
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>🌸Nihongo</h3>
+
+        <p>One character at a time, one step closer to fluency.</p>
+
+        <a href="../index.html">Back to Home</a>
+    </footer>
+    <script src="vocabulary.js"></script>
+</body>
+
+</html>

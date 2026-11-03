@@ -1,0 +1,303 @@
+
+/* ===== IROHA Registration Page ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f8f6ef;
+    --sage: #81977b;
+    --sage-dark: #536b50;
+    --sage-light: #e8eee3;
+    --brown: #40372f;
+    --muted: #81796f;
+    --white: #ffffff;
+    --border: #e8e3d8;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 5%;
+    background: #FAF8F1;
+    border-bottom: 1px solid #E7E5D9;
+}
+
+.logo {
+    color: var(--sage-dark);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    font-size: 18px;
+    margin-left: 6px;
+}
+
+.back-link {
+    color: var(--muted);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--sage-dark);
+}
+
+/* Main Container */
+
+.register-container {
+    width: 100%;
+    padding: 55px 20px 65px;
+}
+
+/* Introduction */
+
+.register-intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--sage-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.register-intro h1 {
+    font-size: clamp(30px, 5vw, 43px);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.register-intro h1 span {
+    color: var(--sage-dark);
+}
+
+.register-intro p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Registration Card */
+
+.register-card {
+    max-width: 460px;
+    margin: auto;
+    padding: 35px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+/* Card Heading */
+
+.card-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.register-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sage-light);
+    border: 1px solid #dce5d5;
+    border-radius: 16px;
+    color: var(--sage-dark);
+    font-size: 30px;
+}
+
+.card-heading h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Form Fields */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 47px;
+    padding: 11px 14px;
+    color: var(--brown);
+    background: #fdfcf9;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #aaa398;
+}
+
+.form-group input:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(129, 151, 123, 0.13);
+}
+
+/* Register Button */
+
+.register-btn {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 7px;
+    padding: 11px 20px;
+    background: var(--sage-dark);
+    color: var(--white);
+    border: 1px solid var(--sage-dark);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.register-btn:hover {
+    background: #40563e;
+    transform: translateY(-1px);
+}
+
+/* Form Message */
+
+.form-message {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--sage-dark);
+}
+.form-message.success {
+    color: #536b50;
+}
+
+.form-message.error {
+    color: #c0392b;
+}
+/* Login Link */
+
+.login-link {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.login-link a {
+    color: var(--sage-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Note */
+
+.register-note {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Footer */
+
+.footer {
+    background: #EEEEE3;
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--sage-dark);
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 8px 0 15px;
+}
+
+.footer a {
+    color: var(--sage-dark);
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid #AEBDA5;
+    padding-bottom: 3px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 520px) {
+    .navbar {
+        min-height: 70px;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .register-container {
+        padding: 40px 16px 50px;
+    }
+
+    .register-card {
+        padding: 27px 21px;
+    }
+
+    .register-intro p {
+        font-size: 14px;
+    }
+}

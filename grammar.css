@@ -1,0 +1,618 @@
+/* =========================================
+   1. GLOBAL STYLES
+========================================= */
+
+:root {
+    --cream: #F8F7F2;
+    --white: #FFFFFF;
+    --dark-green: #243C30;
+    --sage: #82977B;
+    --light-sage: #E8EDE4;
+    --text: #424A43;
+    --muted: #858B82;
+    --border: #E4E7DF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 5%;
+    background-color: #FAF8F1;
+    border-bottom: 1px solid #E7E5D9;
+    position: relative;
+    z-index: 100;
+}
+
+/* ===== Logo ===== */
+.logo {
+    text-decoration: none;
+    color: #526B50;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    font-size: 18px;
+    margin-left: 6px;
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555B4D;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #78916D;
+}
+
+/* ===== Right-side Actions ===== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.grammar-hero {
+    max-width: 1300px;
+    min-height: 490px;
+    margin: auto;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-eyebrow,
+.section-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--sage);
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.2;
+    color: var(--dark-green);
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 span {
+    color: var(--sage);
+    font-weight: 400;
+}
+
+.hero-content p {
+    max-width: 570px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 25px;
+    background: var(--dark-green);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: var(--sage);
+    transform: translateY(-3px);
+}
+
+.hero-btn span {
+    font-size: 18px;
+}
+
+
+/* Hero Decoration */
+
+.hero-decoration {
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+    border: 1px solid #DCE3D7;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle, #EEF1E9, var(--cream) 70%);
+}
+
+.japanese-text {
+    font-family: serif;
+    font-size: 105px;
+    color: var(--dark-green);
+    font-weight: 400;
+}
+
+.decoration-caption {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--sage);
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   4. COMMON SECTION HEADING
+========================================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 3vw, 38px);
+    color: var(--dark-green);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 13px;
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. JLPT LEVEL SECTION
+========================================= */
+
+.jlpt-section {
+    padding: 90px 7%;
+    background: var(--white);
+}
+
+.jlpt-level-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.jlpt-card {
+    position: relative;
+    text-align: left;
+    padding: 40px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 260px;
+    transition: all 0.3s ease;
+    color: var(--text);
+}
+
+.jlpt-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sage);
+}
+
+.jlpt-card.active {
+    background: var(--light-sage);
+    border: 1px solid var(--sage);
+}
+
+.level-number {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #C5CEC0;
+}
+
+.level-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--sage);
+    margin-bottom: 18px;
+}
+
+.jlpt-card h3 {
+    font-size: 34px;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.jlpt-card p {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 300px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.level-arrow {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+
+/* =========================================
+   6. GRAMMAR LIBRARY SECTION
+========================================= */
+
+.grammar-library {
+    padding: 100px 7%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.grammar-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto 30px;
+}
+
+.grammar-category-header h3 {
+    font-size: 22px;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.grammar-category-header span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* Category Grid */
+
+.grammar-category-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* Category Card - For JavaScript Generated Cards */
+
+.category-card {
+    position: relative;
+    padding: 30px;
+    min-height: 190px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sage);
+    box-shadow: 0 12px 30px rgba(36, 60, 48, 0.06);
+}
+
+.category-number {
+    display: block;
+    font-size: 11px;
+    color: var(--sage);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-size: 19px;
+    color: var(--dark-green);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.category-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    font-size: 18px;
+    color: var(--sage);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+    transform: translateX(5px);
+}
+
+
+/* Empty Message */
+
+.no-categories-message {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 40px 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #EEEEE3;
+    color: var(--dark-green);
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+.footer p {
+    color: var(--green);
+    font-size: 13px;
+    margin: 10px 0 20px;
+}
+
+.footer a {
+    display: inline-block;
+    color: var(--green);
+    font-size: 13px;
+    border-bottom: 1px solid #AEBDA5;
+    padding-bottom: 3px;
+    transition: 0.25s ease;
+}
+
+.footer a:hover {
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+/* =========================================
+   8. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .grammar-hero {
+        padding: 70px 6%;
+        gap: 25px;
+    }
+
+    .hero-decoration {
+        width: 240px;
+        height: 240px;
+    }
+
+    .japanese-text {
+        font-size: 80px;
+    }
+
+    .grammar-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 17px 5%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .grammar-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 65px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .hero-decoration {
+        width: 210px;
+        height: 210px;
+        align-self: center;
+    }
+
+    .japanese-text {
+        font-size: 70px;
+    }
+
+    .jlpt-section,
+    .grammar-library {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .jlpt-level-container {
+        grid-template-columns: 1fr;
+    }
+
+    .jlpt-card {
+        padding: 30px;
+    }
+
+    .grammar-category-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .category-card {
+        min-height: 165px;
+    }
+
+    .grammar-category-header h3 {
+        font-size: 18px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+/* Grammar Pattern Cards */
+
+.back-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+    background: transparent;
+    color: var(--sage);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 0;
+    margin-bottom: 10px;
+}
+
+.pattern-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.pattern-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--sage);
+    box-shadow: 0 10px 25px rgba(36, 60, 48, 0.06);
+}
+
+.pattern-card h3 {
+    color: var(--dark-green);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.pattern-formation {
+    color: var(--sage);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.pattern-meaning {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.pattern-arrow {
+    color: var(--dark-green);
+    font-size: 12px;
+    font-weight: 600;
+}

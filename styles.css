@@ -1,0 +1,1630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F1;
+    color: #3D4938;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    width: 100%;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 5%;
+    background-color: #FAF8F1;
+    border-bottom: 1px solid #E7E5D9;
+    position: relative;
+    z-index: 100;
+}
+
+/* ===== Logo ===== */
+.logo {
+    text-decoration: none;
+    color: #526B50;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    font-size: 18px;
+    margin-left: 6px;
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555B4D;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #78916D;
+}
+
+/* ===== Right-side Actions ===== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ===== Start Learning Button ===== */
+.nav-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #78916D;
+    color: #FFFFFF;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #4E6547;
+}
+
+/* ===== Profile Avatar ===== */
+.profile-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-avatar {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #78916D;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile-avatar:hover {
+    background-color: #C64F4F;
+}
+
+/* ===== Profile Dropdown ===== */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    width: 250px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E5D9;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-name {
+    padding: 14px 20px 18px;
+    color: #30352F;
+    font-size: 18px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #737580;
+    font-size: 16px;
+    transition: background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.profile-dropdown a:hover {
+    background-color: #F5F5EF;
+    color: #526B50;
+}
+
+/* ===== Keyboard Accessibility ===== */
+.navbar a:focus-visible,
+.profile-avatar:focus-visible {
+    outline: 2px solid #657D5B;
+    outline-offset: 4px;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 1050px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo span {
+        font-size: 15px;
+    }
+
+    .nav-button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .profile-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .profile-dropdown {
+        width: 230px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .nav-button {
+        padding: 9px 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    min-height: 570px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 590px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #657D5B;
+    background: #E8EBDD;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.18;
+    color: #354332;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #718765;
+}
+
+.hero-content>p {
+    color: #6C7065;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 510px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background: #657D5B;
+    color: #FFFFFF;
+}
+
+.primary-btn:hover {
+    background: #4E6547;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    color: #526B50;
+    border: 1px solid #C9D2C0;
+    background: transparent;
+}
+
+.secondary-btn:hover {
+    background: #E8EBDD;
+}
+
+.hero-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 35px;
+    color: #858878;
+    font-size: 13px;
+}
+
+/* ===== Decorative Illustration ===== */
+.hero-visual {
+    flex: 1;
+    max-width: 440px;
+    width: 100%;
+}
+
+.hero-card {
+    position: relative;
+    min-height: 390px;
+    background: #E9EBDD;
+    border-radius: 48% 48% 22px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(61, 73, 56, 0.08);
+}
+
+.sun-circle {
+    position: absolute;
+    top: 40px;
+    right: 65px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #D9A28F;
+    opacity: 0.85;
+}
+
+.japanese-character {
+    position: relative;
+    z-index: 1;
+    font-family: serif;
+    font-size: 115px;
+    color: #526B50;
+    margin-top: 15px;
+}
+
+.book-decoration {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    height: 75px;
+    margin-top: 5px;
+}
+
+.book {
+    width: 58px;
+    border-radius: 5px 8px 3px 3px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.08);
+}
+
+.book-one {
+    height: 58px;
+    background: #B77D65;
+    transform: rotate(-8deg);
+}
+
+.book-two {
+    height: 72px;
+    background: #657D5B;
+}
+
+.book-three {
+    height: 63px;
+    background: #D6BC8B;
+    transform: rotate(7deg);
+}
+
+.hero-caption {
+    text-align: center;
+    margin-top: 25px;
+    z-index: 1;
+}
+
+.hero-caption span {
+    color: #526B50;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.hero-caption p {
+    color: #737968;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.sakura {
+    position: absolute;
+    color: #D69B9B;
+    font-size: 27px;
+}
+
+.sakura-one {
+    top: 100px;
+    left: 45px;
+}
+
+.sakura-two {
+    top: 180px;
+    right: 35px;
+}
+
+.sakura-three {
+    bottom: 55px;
+    left: 55px;
+}
+
+/* ===== Responsive Hero ===== */
+@media (max-width: 850px) {
+    .hero {
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .hero-visual {
+        max-width: 340px;
+    }
+
+    .hero-card {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 45px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-visual {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-card {
+        min-height: 320px;
+    }
+}
+
+
+/* ===== Courses Section ===== */
+.courses-section {
+    padding: 75px 8%;
+    background-color: #F3F1E7;
+}
+
+.courses-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-tag {
+    color: #718765;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.courses-heading h2 {
+    color: #354332;
+    font-size: clamp(26px, 3vw, 36px);
+    margin: 15px 0;
+}
+
+.courses-heading p {
+    color: #77796D;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===== Course Cards ===== */
+.course-card {
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid #E1E2D5;
+    background-color: #FCFBF6;
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(61, 73, 56, 0.08);
+}
+
+.n5-card {
+    border-top: 4px solid #829775;
+}
+
+.n4-card {
+    border-top: 4px solid #C49A7B;
+}
+
+.course-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.course-level {
+    color: #718765;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.course-kanji {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: #E8EBDD;
+    color: #526B50;
+    font-family: serif;
+    font-size: 25px;
+}
+
+.n4-card .course-kanji {
+    background-color: #F1E5D9;
+    color: #9A7057;
+}
+
+.course-card h3 {
+    color: #354332;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.course-card h4 {
+    color: #657D5B;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.n4-card h4 {
+    color: #A47C60;
+}
+
+.course-card>p {
+    color: #73766A;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 75px;
+}
+
+.course-details {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin: 24px 0;
+    padding-top: 20px;
+    border-top: 1px solid #E9E8DE;
+}
+
+.course-details span {
+    color: #555F50;
+    font-size: 13px;
+}
+
+.course-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #657D5B;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.n4-card .course-btn {
+    background-color: #A47C60;
+}
+
+.course-btn:hover {
+    background-color: #4E6547;
+}
+
+.n4-card .course-btn:hover {
+    background-color: #89664E;
+}
+
+/* ===== Responsive Courses ===== */
+@media (max-width: 700px) {
+    .courses-section {
+        padding: 55px 6%;
+    }
+
+    .courses-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+
+    .course-card>p {
+        min-height: auto;
+    }
+}
+
+/* ===== Learning Categories Section ===== */
+
+.categories-section {
+    padding: 80px 8%;
+    background-color: #f8f6ef;
+}
+
+.categories-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.categories-heading .section-tag {
+    color: #71866a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.categories-heading h2 {
+    color: #344b3b;
+    font-size: 34px;
+    margin: 14px 0;
+}
+
+.categories-heading p {
+    color: #77776c;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    padding: 28px 23px;
+    background: #fffefa;
+    border: 1px solid #e8e6d9;
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(52, 75, 59, 0.09);
+}
+
+.category-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #e8eee2;
+    color: #49664d;
+    font-size: 29px;
+    margin-bottom: 22px;
+}
+
+.category-label {
+    color: #8a927a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.category-card h3 {
+    color: #344b3b;
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.category-card p {
+    min-height: 90px;
+    color: #77776c;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.category-link {
+    color: #526e50;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-link span {
+    transition: transform 0.2s ease;
+}
+
+.category-link:hover span {
+    transform: translateX(4px);
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .categories-section {
+        padding: 55px 6%;
+    }
+
+    .categories-heading h2 {
+        font-size: 27px;
+    }
+
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card p {
+        min-height: auto;
+    }
+}
+
+/* ===== Smart Review Section ===== */
+
+.smart-review-section {
+    padding: 90px 8%;
+    background: #eeeee3;
+}
+
+.review-content {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.review-text .section-tag {
+    color: #71866a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.review-text h2 {
+    color: #344b3b;
+    font-size: 42px;
+    line-height: 1.25;
+    margin: 20px 0;
+}
+
+.review-text h2 span {
+    color: #78916d;
+}
+
+.review-text>p {
+    color: #73756b;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 490px;
+    margin-bottom: 25px;
+}
+
+.review-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.review-benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #4e604e;
+    font-size: 14px;
+}
+
+.benefit-icon {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dce6d4;
+    color: #49664d;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 23px;
+    background: #526e50;
+    color: #fffefa;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.review-btn:hover {
+    background: #3e5940;
+    transform: translateY(-2px);
+}
+
+.review-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.review-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    background: #fffefa;
+    border: 1px solid #e4e4d8;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(52, 75, 59, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #526e50;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.review-status {
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #edf1e7;
+    color: #71866a;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+}
+
+.review-kanji {
+    margin-top: 25px;
+    text-align: center;
+    color: #344b3b;
+    font-size: 76px;
+    font-weight: 600;
+}
+
+.review-card h3 {
+    text-align: center;
+    color: #344b3b;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.review-reading {
+    text-align: center;
+    color: #8a927a;
+    font-size: 14px;
+}
+
+.review-divider {
+    height: 1px;
+    background: #e9e7dc;
+    margin: 25px 0;
+}
+
+.review-example>span {
+    color: #8a927a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.review-example p {
+    color: #344b3b;
+    font-size: 16px;
+    margin: 12px 0 6px;
+}
+
+.review-example small {
+    color: #898a80;
+    font-size: 12px;
+}
+
+.review-progress {
+    margin-top: 25px;
+    color: #71866a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.progress-track {
+    height: 6px;
+    margin-top: 10px;
+    background: #e9e9df;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 70%;
+    height: 100%;
+    background: #91a583;
+    border-radius: 10px;
+}
+
+.review-decoration {
+    position: absolute;
+    color: #c2cdb5;
+    pointer-events: none;
+}
+
+.decoration-one {
+    top: 5px;
+    right: 5px;
+    font-size: 43px;
+}
+
+.decoration-two {
+    bottom: 0;
+    left: 0;
+    font-size: 60px;
+    opacity: 0.7;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    .smart-review-section {
+        padding: 65px 6%;
+    }
+
+    .review-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .review-text h2 {
+        font-size: 35px;
+    }
+
+    .review-visual {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .review-card {
+        padding: 23px;
+    }
+
+    .review-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ===== Daily Japanese Practice Section ===== */
+
+.daily-practice-section {
+    padding: 85px 8%;
+    background: #fffefa;
+}
+
+.practice-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.practice-heading .section-tag {
+    color: #71866a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.practice-heading h2 {
+    color: #344b3b;
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.practice-heading p {
+    color: #77776c;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.practice-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.practice-card {
+    padding: 27px;
+    background: #f8f6ef;
+    border: 1px solid #e9e6da;
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(52, 75, 59, 0.08);
+}
+
+.practice-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.practice-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+.vocabulary-icon {
+    background: #e4ebdc;
+    color: #4e6b4d;
+}
+
+.grammar-icon {
+    background: #eee6d9;
+    color: #8a6e4c;
+}
+
+.kanji-icon {
+    background: #e8e5ee;
+    color: #726583;
+}
+
+.practice-number {
+    color: #b5b7a8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.practice-type {
+    color: #8a927a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.practice-card h3 {
+    color: #344b3b;
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.practice-card>p {
+    color: #77776c;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+    margin-bottom: 22px;
+}
+
+.practice-example {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    margin-bottom: 23px;
+    background: #fffefa;
+    border: 1px solid #ebe8dd;
+    border-radius: 12px;
+}
+
+.practice-japanese {
+    color: #49664d;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.practice-example strong,
+.practice-example small {
+    display: block;
+}
+
+.practice-example strong {
+    color: #465643;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.practice-example small {
+    color: #8a8b80;
+    font-size: 11px;
+}
+
+.practice-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #526e50;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.practice-link span {
+    transition: transform 0.2s ease;
+}
+
+.practice-link:hover span {
+    transform: translateX(4px);
+}
+
+.practice-footer {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.practice-footer span {
+    color: #71866a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.practice-footer p {
+    color: #898a80;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Responsive layout */
+@media (max-width: 950px) {
+    .practice-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .daily-practice-section {
+        padding: 60px 6%;
+    }
+
+    .practice-heading h2 {
+        font-size: 27px;
+    }
+
+    .practice-container {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-card>p {
+        min-height: auto;
+    }
+}
+
+
+/* ===== JLPT Progress Tracker ===== */
+
+.progress-section {
+    padding: 85px 8%;
+    background: #f8f6ef;
+}
+
+.progress-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.progress-heading .section-tag {
+    color: #71866a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.progress-heading h2 {
+    color: #344b3b;
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.progress-heading p {
+    color: #77776c;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.progress-dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.progress-overview,
+.skill-progress-card {
+    padding: 32px;
+    background: #fffefa;
+    border: 1px solid #e8e6d9;
+    border-radius: 20px;
+}
+
+.dashboard-label {
+    color: #849078;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.progress-overview h3 {
+    color: #344b3b;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 20px 0 12px;
+}
+
+.progress-overview>p {
+    color: #77776c;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.overall-progress-info,
+.skill-progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.overall-progress-info {
+    color: #52644d;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.overall-progress-info strong {
+    font-size: 22px;
+    color: #49664d;
+}
+
+.dashboard-progress-track {
+    width: 100%;
+    height: 8px;
+    background: #e9e9df;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dashboard-progress-fill {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.overall-fill {
+    width: 65%;
+    background: #78916d;
+}
+
+.progress-milestone {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 15px;
+    color: #8a927a;
+    font-size: 11px;
+}
+
+.skill-progress-card h3 {
+    color: #344b3b;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.skill-subtitle {
+    color: #929286;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.skill-progress-item {
+    margin-bottom: 24px;
+}
+
+.skill-progress-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-progress-info {
+    color: #53634f;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.skill-progress-info strong {
+    color: #526e50;
+    font-size: 12px;
+}
+
+.vocabulary-fill {
+    width: 75%;
+    background: #8da481;
+}
+
+.grammar-fill {
+    width: 60%;
+    background: #b9a17e;
+}
+
+.kanji-fill {
+    width: 45%;
+    background: #a49ab7;
+}
+
+.reading-fill {
+    width: 50%;
+    background: #88aaa1;
+}
+
+.progress-note {
+    text-align: center;
+    margin-top: 42px;
+}
+
+.progress-note span {
+    color: #71866a;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.progress-note p {
+    color: #898a80;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    .progress-section {
+        padding: 60px 6%;
+    }
+
+    .progress-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-heading h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .progress-overview,
+    .skill-progress-card {
+        padding: 23px;
+    }
+
+    .progress-overview h3 {
+        font-size: 21px;
+    }
+
+    .progress-milestone {
+        font-size: 10px;
+    }
+}
+
+/* ===== Nihongo Footer ===== */
+
+.site-footer {
+    background: #4a674f;
+    color: #3a5333;
+    padding: 65px 8% 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fffefa;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    background: #dce6d4;
+    color: #304637;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.footer-brand>p {
+    color: #d1d8cd;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 20px 0;
+    max-width: 260px;
+}
+
+.footer-japanese {
+    color: #dce6d4;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.footer-brand>small {
+    color: #b6c2b1;
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-links h3,
+.footer-reminder h3 {
+    color: #fffefa;
+    font-size: 15px;
+    margin: 5px 0 10px;
+}
+
+.footer-links a {
+    color: #d1d8cd;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #e3cda8;
+    transform: translateX(3px);
+}
+
+.footer-reminder {
+    padding: 23px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 17px;
+    align-self: start;
+}
+
+.footer-reminder-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #dce6d4;
+    color: #304637;
+    border-radius: 13px;
+    font-size: 24px;
+    margin-bottom: 17px;
+}
+
+.footer-reminder h3 {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-reminder p {
+    color: #d1d8cd;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-start-btn {
+    display: inline-block;
+    padding: 11px 15px;
+    background: #dce6d4;
+    color: #304637;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.footer-start-btn:hover {
+    background: #fffefa;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+    color: #c5d0c0;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* Responsive footer */
+@media (max-width: 1000px) {
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 50px 6% 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 35px;
+    }
+
+    .footer-reminder {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
